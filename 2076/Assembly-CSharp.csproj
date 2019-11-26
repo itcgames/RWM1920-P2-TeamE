@@ -60,6 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Components\Accelerator\Scripts\Acceleration.cs" />
+    <Compile Include="Assets\Components\Accelerator\Scripts\EndAcceleration.cs" />
+    <Compile Include="Assets\Components\Accelerator\Scripts\PlayerValues.cs" />
+    <Compile Include="Assets\Components\Accelerator\Scripts\StartAcceleration.cs" />
     <Compile Include="Assets\Components\Bubble\Scripts\BubbleMovement.cs" />
     <Compile Include="Assets\Components\Bubble\Scripts\CreateBubble.cs" />
     <Compile Include="Assets\Components\Fan\Scripts\FanScript.cs" />
