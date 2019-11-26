@@ -7,9 +7,25 @@ public class AudioControl : MonoBehaviour
 {
     AudioSource m_audioSource;
     // Start is called before the first frame update
+    private static AudioControl instance = null;
+
+    public static AudioControl Instance
+    {
+        get { return instance; }
+    }
+
     void Start()
     {
         m_audioSource = GetComponent<AudioSource>();
+
+        if (instance != null) {
+            Destroy(this.gameObject);
+            return;
+        } else {
+            instance = this;
+        }
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
