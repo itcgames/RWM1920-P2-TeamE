@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AudioControl.cs" />
     <Compile Include="Assets\Components\Accelerator\Scripts\Acceleration.cs" />
     <Compile Include="Assets\Components\Accelerator\Scripts\EndAcceleration.cs" />
     <Compile Include="Assets\Components\Accelerator\Scripts\PlayerValues.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\Components\Fan\Scripts\FanScript.cs" />
     <Compile Include="Assets\Components\Portals\Scripts\PortalEntrance.cs" />
     <Compile Include="Assets\MenuController.cs" />
+    <Compile Include="Assets\Scripts\AudioControl.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Particles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
