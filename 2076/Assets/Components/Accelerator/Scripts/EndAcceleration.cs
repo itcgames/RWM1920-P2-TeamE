@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndAcceleration : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +19,7 @@ public class EndAcceleration : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
-        {
-            player.GetComponent<PlayerValues>().accelerated = false;
-            player.GetComponent<PlayerValues>().decelerate = true;
-        }
+            controller.GetComponent<Acceleration>().accelerate = false;
+            controller.GetComponent<Acceleration>().decelerate = true;
     }
 }
