@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StartAcceleration : MonoBehaviour
 {
-    public GameObject player;
     public GameObject controller;
     // Start is called before the first frame update
     void Start()
@@ -20,9 +19,9 @@ public class StartAcceleration : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (collider.CompareTag("Wall") == false)
         {
-            player.GetComponent<PlayerValues>().accelerated = true;
+            controller.GetComponent<Acceleration>().accelerate = true;
             controller.GetComponent<Acceleration>().correctVelocity();
         }
     }
