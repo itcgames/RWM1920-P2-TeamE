@@ -15,7 +15,7 @@ public class Create : MonoBehaviour
     public GameObject portalEntrance;
     public GameObject portalExit;
 
-    GameObject created;
+    
 
     GameObject objectSelected = null;
 
@@ -44,46 +44,47 @@ public class Create : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (objectSelected != null)
+        if (objectSelected != null)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                if (Input.GetKey(KeyCode.LeftArrow))
-                {
-                    objectSelected.transform.Rotate(Vector3.forward, 1);
-                }
-
-                if (Input.GetKey(KeyCode.RightArrow))
-                {
-                    objectSelected.transform.Rotate(Vector3.back, 1);
-                }
-
-                // if the mouse is not being pressed 
-                if (!Input.GetMouseButton(0))
-                {
-                    objectSelected.transform.position = _get3dMousePosition(); // set the positio
-                }
-                if (isMouseOverUi() == false)
-                {
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        created = Instantiate(objectSelected);
-                        if (created.tag == "Portal")
-                        {
-                            Destroy(objectSelected);
-                            objectSelected = null;
-                            Debug.Log("What do I do now");
-                            objectSelected = portalExit;
-                            placePrefab(_get3dMousePosition(), objectSelected);
-                        }
-                        else
-                        {
-                            Destroy(objectSelected);
-                            objectSelected = null;
-                        }
-                    }
-                }
-
+                objectSelected.transform.Rotate(Vector3.forward, 1);
             }
-        
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                objectSelected.transform.Rotate(Vector3.back, 1);
+            }
+
+            // if the mouse is not being pressed 
+            if (!Input.GetMouseButton(0))
+            {
+                objectSelected.transform.position = _get3dMousePosition(); // set the positio
+            }
+            if (isMouseOverUi() == false)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GameObject created = Instantiate(objectSelected);
+                    if (created.tag == "Portal")
+                    {
+                        Destroy(objectSelected);
+                        objectSelected = null;
+                        Debug.Log("What do I do now");
+                        objectSelected = portalExit;
+                        placePrefab(_get3dMousePosition(), objectSelected);
+                    }
+                    else
+                    {
+                        Destroy(objectSelected);
+                        objectSelected = null;
+                    }
+                    return;
+                }
+            }
+
+
+        }
     }
 
 
