@@ -13,4 +13,9 @@ public class GameOver : MonoBehaviour
             gameOver = true;
         }
     }
+
+    public bool getGameOver()
+    {
+        return gameOver;
+    }
 }
