@@ -15,6 +15,7 @@ public class PlayerValues : MonoBehaviour
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        rb2D.velocity = new Vector2(10.0f, 0);
     }
 
     private void Start()
@@ -24,49 +25,7 @@ public class PlayerValues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (accelerated == false && decelerate == false)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                if (velocity.x > -1.0f)
-                {
-                    velocity.x -= 1.0f;
-                }
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                if (velocity.x < 1.0f)
-                {
-                    velocity.x += 1.0f;
-                }
-            }
-
-            if (Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.RightArrow) == false)
-            {
-                velocity.x = 0;
-            }
-
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                if (velocity.y < 1.0f)
-                {
-                    velocity.y += 1.0f;
-                }
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                if (velocity.y > -1.0f)
-                {
-                    velocity.y += -1.0f;
-                }
-            }
-
-            if (Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false)
-            {
-                velocity.y = 0;
-            }
-        }
-        rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
+        rb2D.MovePosition(rb2D.position + rb2D.velocity * Time.fixedDeltaTime);
         
     }
 
