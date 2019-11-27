@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Alex/Desktop/RWM1920-P2-TeamE/2076/Builds/2076.exe
+C:/Users/Brian/Desktop/RWM1920-P2-TeamE/2076/Builds/2076.exe
 SceneListBegin?
 Assets/Scenes/Menus/MainMenu.unity
 Assets/Scenes/Game.unity
