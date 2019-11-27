@@ -9,7 +9,7 @@ public class PortalEntrance : MonoBehaviour
     public float TeleportTime = 1.0f;
 
     [Header("Name Of Objects Related")]
-    public List<GameObject> PortalExit;
+    public GameObject PortalExit;
 
     public string EntityToTeleport;
 
@@ -17,6 +17,11 @@ public class PortalEntrance : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find(EntityToTeleport);
+    }
+
+    private void Update()
+    {
+        PortalExit = GameObject.FindGameObjectWithTag("PortalExit");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,15 +40,8 @@ public class PortalEntrance : MonoBehaviour
     {
         yield return new WaitForSeconds(TeleportTime);
         Player.SetActive(true);
-        if (PortalExit.Count > 1)
-        {
-            int randPortal = Random.Range(0, PortalExit.Count);
-            Player.transform.position = new Vector2(PortalExit[randPortal].transform.position.x, PortalExit[randPortal].transform.position.y);
-        }
-        else
-        {
-            Player.transform.position = new Vector2(PortalExit[0].transform.position.x, PortalExit[0].transform.position.y);
-        }
+
+            Player.transform.position = new Vector2(PortalExit.transform.position.x, PortalExit.transform.position.y);
     }
 
 
