@@ -9,6 +9,8 @@ TagManager:
   - Portal
   - PortalExit
   - Background
+  - Fan
+  - Belt
   layers:
   - Default
   - TransparentFX

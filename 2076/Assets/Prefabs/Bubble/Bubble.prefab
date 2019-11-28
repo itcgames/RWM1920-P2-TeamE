@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 9188224178520576060}
   - component: {fileID: 9188224178520576061}
   - component: {fileID: 9188224178520576058}
+  - component: {fileID: 114278380619247970}
   - component: {fileID: 4063709563999433033}
+  - component: {fileID: 5434295944205621837}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Bubble
@@ -50,7 +52,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -61,7 +63,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -74,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2e6c699ea0177af40941ac8beed31d54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a85384d9f9edf246990c815d0760f79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 26.4, y: 26.4}
+  m_Size: {x: 8, y: 8.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.01
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -113,19 +114,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188224178520576048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9da8eced7e6b54c9c8f0c000538a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 344817482594263622, guid: 7e599ccb5fdd5d448a68ee9768de853a,
-    type: 3}
+  particles: {fileID: 86501595489096523, guid: 7e599ccb5fdd5d448a68ee9768de853a, type: 3}
   speed: 100
-  maxTime: 10
+  maxTime: 2
   playerTag: Player
-  bubbleSize: {x: 0.1, y: 0.1, z: 0.1}
-  blowSpeed: {x: 0.005, y: 0.005, z: 0.005}
-  bubPopClip: {fileID: 8300000, guid: ecedc34dff6e6ea4fa6ed0bfe8e869f0, type: 3}
 --- !u!123 &9188224178520576061
 LensFlare:
   m_ObjectHideFlags: 0
@@ -149,7 +146,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188224178520576048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -157,7 +154,21 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 11
+  m_Radius: 3.992996
+--- !u!114 &114278380619247970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188224178520576048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef4490d2ed0acb41932b349e73eb1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleSize: {x: 0.2, y: 0.2, z: 0.2}
+  blowSpeed: {x: 0.1, y: 0.1, z: 0.1}
 --- !u!82 &4063709563999433033
 AudioSource:
   m_ObjectHideFlags: 0
@@ -168,9 +179,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ed7a417b0658d76469e2efdf54a8f1fc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.072
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -254,3 +265,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5434295944205621837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188224178520576048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1da8eba2df10a844fa108df264637818, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
