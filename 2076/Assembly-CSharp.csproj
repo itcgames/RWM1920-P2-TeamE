@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Bubble\CreateBubble.cs" />
     <Compile Include="Assets\Scripts\Drag&amp;Drop\Create.cs" />
     <Compile Include="Assets\Scripts\EventHandling.cs" />
-    <Compile Include="Assets\Scripts\Fan\FanScript.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\Particles.cs" />

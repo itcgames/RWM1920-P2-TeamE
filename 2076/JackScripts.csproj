@@ -60,8 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Conveyor Belt\ConveyorBelt.cs" />
-    <Compile Include="Assets\Scripts\Conveyor Belt\Rotate.cs" />
+    <Compile Include="Assets\Components\Conveyor Belt\Scripts\ConveyorBelt.cs" />
+    <Compile Include="Assets\Components\Conveyor Belt\Scripts\Rotate.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
