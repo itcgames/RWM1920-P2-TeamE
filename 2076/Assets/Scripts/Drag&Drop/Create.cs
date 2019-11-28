@@ -14,8 +14,11 @@ public class Create : MonoBehaviour
     public GameObject bubble;
     public GameObject portalEntrance;
     public GameObject portalExit;
+    public GameObject cannon;
+    public GameObject bP;
+    public GameObject sP;
 
-    
+    public GameObject ball;
 
     GameObject objectSelected = null;
 
@@ -25,6 +28,8 @@ public class Create : MonoBehaviour
 
     Vector3 placement;
 
+    public List<GameObject> createdObjs = new List<GameObject>();
+
     private void Awake()
     {
         thisCamera = Camera.main;
@@ -33,8 +38,16 @@ public class Create : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //bubble.GetComponent<BubbleMovement>().enabled = false;
-        //bubble.GetComponent<CircleCollider2D>().enabled = false;
+        bubble.GetComponent<BubbleMovement>().enabled = false;
+        bubble.GetComponent<CircleCollider2D>().enabled = false;
+
+        fan.GetComponentInChildren<AreaEffector2D>().enabled = false;
+        fan.GetComponent<CapsuleCollider2D>().enabled = false;
+
+        belt.GetComponentInChildren<ConveyorBelt>().enabled = false;
+        belt.GetComponentInChildren<CapsuleCollider2D>().enabled = false;
+
+        ball.GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
     // Update is called once per frame
@@ -62,11 +75,12 @@ public class Create : MonoBehaviour
                     if(isMouseOverUi() == false)
                     {
                         GameObject created = Instantiate(objectSelected);
-                        if (created.tag == "Portal")
+                        createdObjs.Add(created);
+
+                    if (created.tag == "Portal")
                         {
                             Destroy(objectSelected);
                             objectSelected = null;
-                            Debug.Log("What do I do now");
                             objectSelected = portalExit;
                             placePrefab(_get2dMousePosition(), objectSelected);
                         }
@@ -78,11 +92,47 @@ public class Create : MonoBehaviour
                         return;
                     }                                         
                 }
-            
         }
     }
 
+    public void RemoveAllFromList()
+    {
+        if (createdObjs.Count != 0)
+        {
+            for (int i = createdObjs.Count - 1; i > -1; i--)
+            {
+                Destroy(createdObjs[i].gameObject);
+                createdObjs.RemoveAt(i);
+            }
+        }
+    }
 
+    public void enableAll()
+    {
+        if (createdObjs.Count != 0)
+        {
+            for (int i = createdObjs.Count - 1; i > -1; i--)
+            {
+                if(createdObjs[i].gameObject.tag == "Fan")
+                {
+                    createdObjs[i].gameObject.GetComponentInChildren<AreaEffector2D>().enabled = true;
+                    createdObjs[i].gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                }
+
+                if (createdObjs[i].gameObject.tag == "Bubble")
+                {
+                    createdObjs[i].gameObject.GetComponent<BubbleMovement>().enabled = true;
+                    createdObjs[i].gameObject.GetComponent<CircleCollider2D>().enabled = true;
+                }
+
+                if (createdObjs[i].gameObject.tag == "Belt")
+                {
+                    createdObjs[i].gameObject.GetComponentInChildren<ConveyorBelt>().enabled = true;
+                    createdObjs[i].gameObject.GetComponentInChildren<CapsuleCollider2D>().enabled = true;
+                }
+            }
+        }
+    }
 
     public void createFan()
     {
@@ -127,10 +177,43 @@ public class Create : MonoBehaviour
         
     }
 
+    public void createCannon()
+    {
+
+        Destroy(objectSelected);
+
+        objectSelected = cannon;
+
+        placePrefab(_get2dMousePosition(), objectSelected);
+
+    }
+
 
     private bool isMouseOverUi()
     {
         return EventSystem.current.IsPointerOverGameObject();
+    }
+
+    public void createbP()
+    {
+
+        Destroy(objectSelected);
+
+        objectSelected = bP;
+
+        placePrefab(_get2dMousePosition(), objectSelected);
+
+    }
+
+    public void createsP()
+    {
+
+        Destroy(objectSelected);
+
+        objectSelected = sP;
+
+        placePrefab(_get2dMousePosition(), objectSelected);
+
     }
 
     private Vector2 _get2dMousePosition()
