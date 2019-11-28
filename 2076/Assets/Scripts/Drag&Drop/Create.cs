@@ -22,6 +22,8 @@ public class Create : MonoBehaviour
 
     GameObject objectSelected = null;
 
+    public GameObject eventSystem;
+
     bool isDragging = false;
 
     string selected = "";
@@ -136,45 +138,60 @@ public class Create : MonoBehaviour
 
     public void createFan()
     {
-
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        {
             Destroy(objectSelected);
-        
-        objectSelected = fan;
-    
+
+            objectSelected = fan;
+
             placePrefab(_get2dMousePosition(), objectSelected);
+
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
         
     }
 
     public void createBelt()
     {
-   
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        {
             Destroy(objectSelected);
-        
-        objectSelected = belt;
-    
+
+            objectSelected = belt;
+
             placePrefab(_get2dMousePosition(), objectSelected);
+
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
         
     }
 
     public void createBubble()
     {
-      
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        {
             Destroy(objectSelected);
-        
-        objectSelected = bubble;
-      
+
+            objectSelected = bubble;
+
             placePrefab(_get2dMousePosition(), objectSelected);
+
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
     }
 
     public void createPortal()
     {
-      
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        {
             Destroy(objectSelected);
-        
-        objectSelected = portalEntrance;
-     
+
+            objectSelected = portalEntrance;
+
             placePrefab(_get2dMousePosition(), objectSelected);
-        
+
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
     }
 
     public void createCannon()
