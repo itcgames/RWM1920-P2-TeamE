@@ -1650,15 +1650,12 @@ MonoBehaviour:
     type: 3}
   portalExit: {fileID: 1469246630994692538, guid: e7098b5ab7f25a344ac3042748d230a1,
     type: 3}
-<<<<<<< HEAD
   eventSystem: {fileID: 2087772021}
-=======
   cannon: {fileID: 7142631291170237328, guid: 74d14d65d5c2b12488dffcd1d5861003, type: 3}
   bP: {fileID: 1361538819995571342, guid: 508f678378d494c489c96c084428062b, type: 3}
   sP: {fileID: 8217005672690576680, guid: aa298cb037399934daab603cfb161968, type: 3}
   ball: {fileID: 562884757}
   createdObjs: []
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f
 --- !u!4 &707503306
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,7 +1670,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &821793924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,15 +1708,11 @@ RectTransform:
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821793926
-=======
---- !u!114 &707503307
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 821793924}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1833,7 +1825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821793924}
   m_CullTransparentMesh: 0
-=======
   m_GameObject: {fileID: 707503304}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1845,7 +1836,6 @@ CanvasRenderer:
   bubble: {fileID: 9188224178520576048, guid: b75973adfd9b15148b49b7ca81c606e7, type: 3}
   ball: {fileID: 562884757}
   gameController: {fileID: 707503304}
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f
 --- !u!1 &841981644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3231,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495758153}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!1 &1554189423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,10 +3322,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1554319760
-=======
 --- !u!4 &1554319760 stripped
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f
 Transform:
   m_CorrespondingSourceObject: {fileID: 1361538819995571345, guid: 508f678378d494c489c96c084428062b,
     type: 3}
@@ -8445,11 +8431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_endPoint: {fileID: 598622822}
   m_endPanel: {fileID: 598620726}
-<<<<<<< HEAD
   m_timeText: {fileID: 462634271}
   m_costText: {fileID: 821793926}
   currentCost: 200
-=======
 --- !u!1001 &1361538818843909377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8588,4 +8572,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa298cb037399934daab603cfb161968, type: 3}
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f

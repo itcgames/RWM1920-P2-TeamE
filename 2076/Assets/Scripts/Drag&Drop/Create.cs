@@ -175,13 +175,9 @@ public class Create : MonoBehaviour
             objectSelected = bubble;
 
             placePrefab(_get2dMousePosition(), objectSelected);
-<<<<<<< HEAD
 
             eventSystem.GetComponent<EventHandling>().updateCost(10);
         }
-        
-=======
->>>>>>> 56c5740146bd11e92e9ea64e64f0841a43a7116f
     }
 
     public void createPortal()
