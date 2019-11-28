@@ -25,10 +25,6 @@ public class Create : MonoBehaviour
 
     Vector3 placement;
 
-    bool clickedB;
-
-
-
     private void Awake()
     {
         thisCamera = Camera.main;
@@ -59,31 +55,30 @@ public class Create : MonoBehaviour
             // if the mouse is not being pressed 
             if (!Input.GetMouseButton(0))
             {
-                objectSelected.transform.position = _get3dMousePosition(); // set the positio
+                objectSelected.transform.position = _get2dMousePosition(); // set the positio
             }
-            if (isMouseOverUi() == false)
-            {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    GameObject created = Instantiate(objectSelected);
-                    if (created.tag == "Portal")
+                    if(isMouseOverUi() == false)
                     {
-                        Destroy(objectSelected);
-                        objectSelected = null;
-                        Debug.Log("What do I do now");
-                        objectSelected = portalExit;
-                        placePrefab(_get3dMousePosition(), objectSelected);
-                    }
-                    else
-                    {
-                        Destroy(objectSelected);
-                        objectSelected = null;
-                    }
-                    return;
+                        GameObject created = Instantiate(objectSelected);
+                        if (created.tag == "Portal")
+                        {
+                            Destroy(objectSelected);
+                            objectSelected = null;
+                            Debug.Log("What do I do now");
+                            objectSelected = portalExit;
+                            placePrefab(_get2dMousePosition(), objectSelected);
+                        }
+                        else
+                        {
+                            Destroy(objectSelected);
+                            objectSelected = null;
+                        }
+                        return;
+                    }                                         
                 }
-            }
-
-
+            
         }
     }
 
@@ -96,7 +91,7 @@ public class Create : MonoBehaviour
         
         objectSelected = fan;
     
-            placePrefab(_get3dMousePosition(), objectSelected);
+            placePrefab(_get2dMousePosition(), objectSelected);
         
     }
 
@@ -107,7 +102,7 @@ public class Create : MonoBehaviour
         
         objectSelected = belt;
     
-            placePrefab(_get3dMousePosition(), objectSelected);
+            placePrefab(_get2dMousePosition(), objectSelected);
         
     }
 
@@ -118,7 +113,7 @@ public class Create : MonoBehaviour
         
         objectSelected = bubble;
       
-            placePrefab(_get3dMousePosition(), objectSelected);
+            placePrefab(_get2dMousePosition(), objectSelected);
         
     }
     public void createPortal()
@@ -128,7 +123,7 @@ public class Create : MonoBehaviour
         
         objectSelected = portalEntrance;
      
-            placePrefab(_get3dMousePosition(), objectSelected);
+            placePrefab(_get2dMousePosition(), objectSelected);
         
     }
 
@@ -138,11 +133,10 @@ public class Create : MonoBehaviour
         return EventSystem.current.IsPointerOverGameObject();
     }
 
-    private Vector3 _get3dMousePosition()
+    private Vector2 _get2dMousePosition()
     {
-        Vector3 newPos = new Vector3();
+        Vector2 newPos = new Vector2();
         newPos = Input.mousePosition;
-        newPos.z = 10;
 
         newPos = thisCamera.ScreenToWorldPoint(newPos);
         return newPos;

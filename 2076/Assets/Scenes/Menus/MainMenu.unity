@@ -711,8 +711,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5411765, g: 0.4392157, b: 0.4862745, a: 1}
+    m_PressedColor: {r: 1, g: 0.23113209, b: 0.5731879, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1149,8 +1149,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.045042507, b: 0.6037736, a: 1}
-    m_PressedColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+    m_HighlightedColor: {r: 0.5411765, g: 0.4392157, b: 0.4862745, a: 1}
+    m_PressedColor: {r: 1, g: 0.23137255, b: 0.57254905, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1294,10 +1294,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1616480054}
   m_HandleRect: {fileID: 702690164}
   m_Direction: 0
-  m_MinValue: 0.1
-  m_MaxValue: 10
+  m_MinValue: 0
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 5
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1340,7 +1340,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8782426d3b9cc8b4ab1ac74174b71bdd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 49ac6134074134a43a74f88ddd7e3bb7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1691,8 +1691,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.045042507, b: 0.6037736, a: 1}
-    m_PressedColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+    m_HighlightedColor: {r: 0.5377358, g: 0.4388127, b: 0.4827225, a: 1}
+    m_PressedColor: {r: 1, g: 0.23137255, b: 0.57254905, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
