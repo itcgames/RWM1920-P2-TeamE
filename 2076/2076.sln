@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackScripts", "JackScripts.csproj", "{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{B32EB833-1653-0391-48F6-890559DE8086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackScripts", "JackScripts.csproj", "{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{5872FED3-A99D-CA6E-5641-02F14DD86CFA}"
 EndProject
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B32EB833-1653-0391-48F6-890559DE8086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B32EB833-1653-0391-48F6-890559DE8086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32EB833-1653-0391-48F6-890559DE8086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32EB833-1653-0391-48F6-890559DE8086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5872FED3-A99D-CA6E-5641-02F14DD86CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5872FED3-A99D-CA6E-5641-02F14DD86CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5872FED3-A99D-CA6E-5641-02F14DD86CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
