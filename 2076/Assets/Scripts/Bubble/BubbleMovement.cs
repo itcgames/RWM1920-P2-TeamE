@@ -10,24 +10,19 @@ public class BubbleMovement : MonoBehaviour
     bool startTimer = false;
     float timer = 0;
     public float maxTime;
+    float destroyTime;
 
     public string playerTag;
     GameObject player;
 
-    public Vector3 bubbleSize;
-    public Vector3 blowSpeed;
-
-    public AudioClip bubPopClip;
-    AudioSource bubPopSource;
+    private Animator anim;
 
     //move the bubble up 
     void Start()
     {
         GetComponent<Rigidbody2D>().AddForce(Vector3.up * speed);
-        startTimer = true;
-
-        bubPopSource = this.GetComponent<AudioSource>();
-        
+        anim = GetComponent<Animator>();
+        startTimer = true;      
     }
 
     // Once the destination is reached destroy the bubble
@@ -40,14 +35,11 @@ public class BubbleMovement : MonoBehaviour
         }
         if (timer >= maxTime)
         {
-            bubPopSource.Play();
-            Destroy(gameObject);
-        }
-
-        //blowing up the bubble
-        if (transform.localScale != bubbleSize)
-        {
-            transform.localScale += blowSpeed;
+            anim.SetBool("Pop", true);
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("bubblePop"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -57,8 +49,11 @@ public class BubbleMovement : MonoBehaviour
         {
             if (other.tag != playerTag && other.tag != "Bubble")
             {
-                bubPopSource.Play();
-                Destroy(gameObject);
+                anim.SetBool("Pop", true);
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("bubblePop"))
+                {
+                    Destroy(gameObject);
+                }
             }
             else if (other.tag != "Bubble")
             {
@@ -77,10 +72,10 @@ public class BubbleMovement : MonoBehaviour
     //when the bubble is destroyed instatiate particle effect
     private void OnDestroy()
     {
+        Instantiate(particles, transform.position, transform.rotation);
         player.transform.SetParent(null);
         player.GetComponent<Rigidbody2D>().isKinematic = false;
         player.GetComponent<Collider2D>().enabled = true;
-        Instantiate(particles, transform.position, transform.rotation);
     }
 
     private void time()

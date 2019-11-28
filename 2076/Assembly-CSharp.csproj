@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Accelerator\PlayerValues.cs" />
     <Compile Include="Assets\Scripts\Accelerator\StartAcceleration.cs" />
     <Compile Include="Assets\Scripts\AudioControl.cs" />
+    <Compile Include="Assets\Scripts\Bubble\BubbleBlow.cs" />
     <Compile Include="Assets\Scripts\Bubble\BubbleMovement.cs" />
     <Compile Include="Assets\Scripts\Bubble\CreateBubble.cs" />
     <Compile Include="Assets\Scripts\Drag&amp;Drop\Create.cs" />
