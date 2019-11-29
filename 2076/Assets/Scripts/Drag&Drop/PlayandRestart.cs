@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayandRestart : MonoBehaviour
 {
@@ -14,6 +16,14 @@ public class PlayandRestart : MonoBehaviour
     public GameObject gameController;
 
     Vector3 ballPos;
+
+    public Button portalButton;
+    public Button fanButton;
+    public Button beltButton;
+    public Button bubbleButton;
+    public Button platButton;
+    public Button bigPlatButton;
+    public Button canonButton;
 
     private void Start()
     {
@@ -35,6 +45,17 @@ public class PlayandRestart : MonoBehaviour
 
         ball.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
+
+        portalButton.interactable = true;
+        fanButton.interactable = true;
+        beltButton.interactable = true;
+        bubbleButton.interactable = true;
+        platButton.interactable = true;
+        bigPlatButton.interactable = true;
+        canonButton.interactable = true;
+
         isPlay = false;
+
+
     }
 }

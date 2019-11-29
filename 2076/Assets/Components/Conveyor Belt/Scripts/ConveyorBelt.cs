@@ -10,6 +10,9 @@ public class ConveyorBelt : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        other.transform.position = Vector3.MoveTowards(other.transform.position, endpoint.position, speed * Time.deltaTime);
+        if (other.tag == "Player")
+        {
+            other.transform.position = Vector3.MoveTowards(other.transform.position, endpoint.position, speed * Time.deltaTime);
+        }
     }
 }

@@ -18,6 +18,9 @@ public class EventHandling : MonoBehaviour
 
     public float currentCost = 200;
 
+    public ParticleSystem particles;
+    Vector3 position = new Vector3(-25, 10, 1);
+
     void Start()
     {
         gameOverTime = 5.0f;
@@ -38,12 +41,12 @@ public class EventHandling : MonoBehaviour
                 if (gameOverTime == 5.0f)
                 {
                     m_endPanel.SetActive(true);
+                    Instantiate(particles);
                 }
                 if (gameOverTime <= 0)
                 {
                     SceneManager.LoadScene("MainMenu");
                 }
-
                 gameOverTime -= Time.deltaTime;
             }
 

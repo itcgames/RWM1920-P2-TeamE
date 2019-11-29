@@ -18,6 +18,14 @@ public class Create : MonoBehaviour
     public GameObject bP;
     public GameObject sP;
 
+    public Button portalButton;
+    public Button fanButton;
+    public Button beltButton;
+    public Button bubbleButton;
+    public Button platButton;
+    public Button bigPlatButton;
+    public Button canonButton;
+
     public GameObject ball;
 
     GameObject objectSelected = null;
@@ -74,28 +82,63 @@ public class Create : MonoBehaviour
             {
                 objectSelected.transform.position = _get2dMousePosition(); // set the positio
             }
-                if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (isMouseOverUi() == false)
                 {
-                    if(isMouseOverUi() == false)
-                    {
-                        GameObject created = Instantiate(objectSelected);
-                        createdObjs.Add(created);
+                    GameObject created = Instantiate(objectSelected);
+                    createdObjs.Add(created);
 
                     if (created.tag == "Portal")
-                        {
-                            Destroy(objectSelected);
-                            objectSelected = null;
-                            objectSelected = portalExit;
-                            placePrefab(_get2dMousePosition(), objectSelected);
-                        }
-                        else
-                        {
-                            Destroy(objectSelected);
-                            objectSelected = null;
-                        }
-                        return;
-                    }                                         
+                    {
+                        Destroy(objectSelected);
+                        objectSelected = null;
+                        objectSelected = portalExit;
+                        placePrefab(_get2dMousePosition(), objectSelected);
+                    }
+                    else
+                    {
+                        Destroy(objectSelected);
+                        objectSelected = null;
+                    }
+                    return;
                 }
+            }
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 110)
+        {
+            portalButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 30)
+        {
+            fanButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        {
+            beltButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        {
+            bubbleButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        {
+            canonButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
+        {
+            platButton.interactable = false;
+        }
+
+        if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
+        {
+            bigPlatButton.interactable = false;
         }
     }
 
@@ -144,7 +187,7 @@ public class Create : MonoBehaviour
 
     public void createFan()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 30)
         {
             Destroy(objectSelected);
 
@@ -152,14 +195,14 @@ public class Create : MonoBehaviour
 
             placePrefab(_get2dMousePosition(), objectSelected);
 
-            eventSystem.GetComponent<EventHandling>().updateCost(20);
+            eventSystem.GetComponent<EventHandling>().updateCost(30);
         }
         
     }
 
     public void createBelt()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 20)
         {
             Destroy(objectSelected);
 
@@ -174,7 +217,7 @@ public class Create : MonoBehaviour
 
     public void createBubble()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 20)
         {
             Destroy(objectSelected);
 
@@ -182,13 +225,13 @@ public class Create : MonoBehaviour
 
             placePrefab(_get2dMousePosition(), objectSelected);
 
-            eventSystem.GetComponent<EventHandling>().updateCost(10);
+            eventSystem.GetComponent<EventHandling>().updateCost(20);
         }
     }
 
     public void createPortal()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 110)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 100)
         {
             Destroy(objectSelected);
 
@@ -202,7 +245,7 @@ public class Create : MonoBehaviour
 
     public void createCannon()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 20)
         {
             Destroy(objectSelected);
 
@@ -223,7 +266,7 @@ public class Create : MonoBehaviour
 
     public void createbP()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 10)
         {
             Destroy(objectSelected);
 
@@ -237,7 +280,7 @@ public class Create : MonoBehaviour
 
     public void createsP()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
+        if (eventSystem.GetComponent<EventHandling>().currentCost >= 10)
         {
             Destroy(objectSelected);
 

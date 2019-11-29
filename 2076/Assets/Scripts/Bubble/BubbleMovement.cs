@@ -22,7 +22,7 @@ public class BubbleMovement : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().AddForce(Vector3.up * speed);
         anim = GetComponent<Animator>();
-        startTimer = true;      
+        startTimer = true;
     }
 
     // Once the destination is reached destroy the bubble
@@ -50,10 +50,10 @@ public class BubbleMovement : MonoBehaviour
             if (other.tag != playerTag && other.tag != "Bubble")
             {
                 anim.SetBool("Pop", true);
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("bubblePop"))
-                {
+                //if (anim.GetCurrentAnimatorStateInfo(0).IsName("bubblePop"))
+                //{
                     Destroy(gameObject);
-                }
+                //}
             }
             else if (other.tag != "Bubble")
             {
