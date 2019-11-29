@@ -20,6 +20,6 @@ public class EndAcceleration : MonoBehaviour
     void OnTriggerExit2D(Collider2D collider)
     {
             controller.GetComponent<Acceleration>().accelerate = false;
-            controller.GetComponent<Acceleration>().decelerate = true;
+            //controller.GetComponent<Acceleration>().decelerate = true;
     }
 }

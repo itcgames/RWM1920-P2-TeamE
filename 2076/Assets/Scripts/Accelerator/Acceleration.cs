@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Acceleration : MonoBehaviour
 {
-    public GameObject player;
-    private Animator anim;
+    private GameObject player;
 
     float angle;
     float speed;
@@ -16,9 +15,9 @@ public class Acceleration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         angle = transform.rotation.eulerAngles.z - 90;
-        speed = 5.5f;
-        anim = GetComponent<Animator>();
+        speed = 0.5f;
         Debug.Log(angle);
     }
 
@@ -27,18 +26,17 @@ public class Acceleration : MonoBehaviour
     {
         if(accelerate == true)
         {
-            anim.SetBool("Fire", true);
             Vector2 newSpeed = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle) * speed, Mathf.Sin(Mathf.Deg2Rad * angle) * speed);
 
             player.GetComponent<Rigidbody2D>().velocity += newSpeed;
         }
 
-        if (decelerate == true)
-        {
-            Vector2 newSpeed = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle) * -speed);
+        //if (decelerate == true)
+        //{
+        //    Vector2 newSpeed = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle) * -speed);
 
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, player.GetComponent<Rigidbody2D>().velocity.y + newSpeed.y);
-        }
+        //    player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, player.GetComponent<Rigidbody2D>().velocity.y + newSpeed.y);
+        //}
     }
 
     public void correctVelocity()

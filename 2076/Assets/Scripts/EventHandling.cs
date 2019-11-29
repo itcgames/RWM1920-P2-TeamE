@@ -21,7 +21,8 @@ public class EventHandling : MonoBehaviour
     void Start()
     {
         gameOverTime = 5.0f;
-        gameTimer = 60.0f;
+        gameTimer = 0.0f;
+        m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
 
         m_costText.text = currentCost.ToString();
     }
@@ -29,27 +30,30 @@ public class EventHandling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
 
-        if(m_endPoint.GetComponent<GameOver>().getGameOver() == true || gameTimer < 0)
+        if (PlayandRestart.isPlay)
         {
-            if (gameOverTime == 5.0f)
+            if (m_endPoint.GetComponent<GameOver>().getGameOver() == true)
             {
-                m_endPanel.SetActive(true);
-            }
-            if (gameOverTime <= 0)
-            {
-                SceneManager.LoadScene("MainMenu");
+                if (gameOverTime == 5.0f)
+                {
+                    m_endPanel.SetActive(true);
+                }
+                if (gameOverTime <= 0)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
+
+                gameOverTime -= Time.deltaTime;
             }
 
-            gameOverTime -= Time.deltaTime;
-        }
 
-        if (gameTimer > 0)
-        {
-            m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
-            Debug.Log(m_timeText.text);
-            gameTimer -= Time.deltaTime;
+            if (gameTimer >= 0)
+            {
+                m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
+                Debug.Log(m_timeText.text);
+                gameTimer += Time.deltaTime;
+            }
         }
     }
 
@@ -57,5 +61,19 @@ public class EventHandling : MonoBehaviour
     {
         currentCost -= t_cost;
         m_costText.text = currentCost.ToString();
+    }
+
+    public void resetCost()
+    {
+        currentCost = 200;
+        gameTimer = 0.0f;
+        m_costText.text = currentCost.ToString();
+        m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
+    }
+
+    public void resetG()
+    {
+        SceneManager.LoadScene("MainMenu");
+
     }
 }

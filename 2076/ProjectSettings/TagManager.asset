@@ -11,6 +11,7 @@ TagManager:
   - Background
   - Fan
   - Belt
+  - Cannon
   layers:
   - Default
   - TransparentFX

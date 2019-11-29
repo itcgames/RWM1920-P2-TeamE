@@ -8,6 +8,7 @@ public class PlayandRestart : MonoBehaviour
     public GameObject belt;
     public GameObject bubble;
     public GameObject ball;
+    public static bool isPlay = false;
 
     Create createScript;
     public GameObject gameController;
@@ -17,13 +18,14 @@ public class PlayandRestart : MonoBehaviour
     private void Start()
     {
         createScript = gameController.GetComponent<Create>();
+        ballPos = ball.transform.position;
     }
 
     public void Play()
     {
         createScript.enableAll();
         ball.GetComponent<Rigidbody2D>().isKinematic = false;
-        ballPos = ball.transform.position;
+        isPlay = true;
     }
 
     public void Restart()
@@ -33,5 +35,6 @@ public class PlayandRestart : MonoBehaviour
 
         ball.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
+        isPlay = false;
     }
 }

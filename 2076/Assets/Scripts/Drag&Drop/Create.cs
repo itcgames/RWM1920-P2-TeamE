@@ -50,6 +50,8 @@ public class Create : MonoBehaviour
         belt.GetComponentInChildren<CapsuleCollider2D>().enabled = false;
 
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
+
+        cannon.GetComponentInChildren<BoxCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -132,13 +134,17 @@ public class Create : MonoBehaviour
                     createdObjs[i].gameObject.GetComponentInChildren<ConveyorBelt>().enabled = true;
                     createdObjs[i].gameObject.GetComponentInChildren<CapsuleCollider2D>().enabled = true;
                 }
+                if (createdObjs[i].gameObject.tag == "Cannon")
+                {
+                    createdObjs[i].GetComponentInChildren<BoxCollider2D>().enabled = true;
+                }
             }
         }
     }
 
     public void createFan()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
         {
             Destroy(objectSelected);
 
@@ -146,14 +152,14 @@ public class Create : MonoBehaviour
 
             placePrefab(_get2dMousePosition(), objectSelected);
 
-            eventSystem.GetComponent<EventHandling>().updateCost(10);
+            eventSystem.GetComponent<EventHandling>().updateCost(20);
         }
         
     }
 
     public void createBelt()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
         {
             Destroy(objectSelected);
 
@@ -161,14 +167,14 @@ public class Create : MonoBehaviour
 
             placePrefab(_get2dMousePosition(), objectSelected);
 
-            eventSystem.GetComponent<EventHandling>().updateCost(10);
+            eventSystem.GetComponent<EventHandling>().updateCost(20);
         }
         
     }
 
     public void createBubble()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
         {
             Destroy(objectSelected);
 
@@ -182,7 +188,7 @@ public class Create : MonoBehaviour
 
     public void createPortal()
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost > 0)
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 110)
         {
             Destroy(objectSelected);
 
@@ -190,18 +196,22 @@ public class Create : MonoBehaviour
 
             placePrefab(_get2dMousePosition(), objectSelected);
 
-            eventSystem.GetComponent<EventHandling>().updateCost(10);
+            eventSystem.GetComponent<EventHandling>().updateCost(110);
         }
     }
 
     public void createCannon()
     {
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 20)
+        {
+            Destroy(objectSelected);
 
-        Destroy(objectSelected);
+            objectSelected = cannon;
 
-        objectSelected = cannon;
+            placePrefab(_get2dMousePosition(), objectSelected);
 
-        placePrefab(_get2dMousePosition(), objectSelected);
+            eventSystem.GetComponent<EventHandling>().updateCost(20);
+        }
 
     }
 
@@ -213,23 +223,30 @@ public class Create : MonoBehaviour
 
     public void createbP()
     {
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
+        {
+            Destroy(objectSelected);
 
-        Destroy(objectSelected);
+            objectSelected = bP;
 
-        objectSelected = bP;
-
-        placePrefab(_get2dMousePosition(), objectSelected);
+            placePrefab(_get2dMousePosition(), objectSelected);
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
 
     }
 
     public void createsP()
     {
+        if (eventSystem.GetComponent<EventHandling>().currentCost > 10)
+        {
+            Destroy(objectSelected);
 
-        Destroy(objectSelected);
+            objectSelected = sP;
 
-        objectSelected = sP;
+            placePrefab(_get2dMousePosition(), objectSelected);
 
-        placePrefab(_get2dMousePosition(), objectSelected);
+            eventSystem.GetComponent<EventHandling>().updateCost(10);
+        }
 
     }
 
