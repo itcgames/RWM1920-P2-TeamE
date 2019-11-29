@@ -17,7 +17,7 @@ public class Acceleration : MonoBehaviour
     void Start()
     {
         angle = transform.rotation.eulerAngles.z - 90;
-        speed = 0.5f;
+        speed = 5.5f;
         anim = GetComponent<Animator>();
         Debug.Log(angle);
     }
