@@ -20,7 +20,6 @@ public class BubbleMovement : MonoBehaviour
     //move the bubble up 
     void Start()
     {
-        GetComponent<Rigidbody2D>().AddForce(Vector3.up * speed);
         anim = GetComponent<Animator>();
         startTimer = true;
     }
@@ -45,27 +44,18 @@ public class BubbleMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.transform.childCount <= 0)
+        if (other.tag != playerTag && other.tag != "Bubble")
         {
-            if (other.tag != playerTag && other.tag != "Bubble")
-            {
-                anim.SetBool("Pop", true);
-                //if (anim.GetCurrentAnimatorStateInfo(0).IsName("bubblePop"))
-                //{
-                    Destroy(gameObject);
-                //}
-            }
-            else if (other.tag != "Bubble")
-            {
-                player = other.gameObject;
-                player.transform.SetParent(this.transform);
-                player.GetComponent<Rigidbody2D>().isKinematic = true;
-                player.transform.localPosition = this.transform.position;
-            }
+            anim.SetBool("Pop", true);
+            Destroy(gameObject);
         }
-        else
+        else if (other.tag != "Bubble")
         {
-            return;
+            player = other.gameObject;
+            player.transform.SetParent(this.transform);
+            player.GetComponent<Rigidbody2D>().isKinematic = true;
+            player.transform.position = this.transform.position;
+            GetComponent<Rigidbody2D>().AddForce(Vector3.up * speed);
         }
     }
 

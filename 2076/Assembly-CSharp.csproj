@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Bubble\BubbleMovement.cs" />
     <Compile Include="Assets\Scripts\Bubble\CreateBubble.cs" />
     <Compile Include="Assets\Scripts\Drag&amp;Drop\Create.cs" />
+    <Compile Include="Assets\Scripts\Drag&amp;Drop\Drag.cs" />
+    <Compile Include="Assets\Scripts\Drag&amp;Drop\ItemBox.cs" />
     <Compile Include="Assets\Scripts\Drag&amp;Drop\PlayandRestart.cs" />
     <Compile Include="Assets\Scripts\EventHandling.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
