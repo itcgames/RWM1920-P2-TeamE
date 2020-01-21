@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -22,9 +23,12 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (eventSystem.GetComponent<EventHandling>().currentCost >= COST)
+        if (SceneManager.GetActiveScene().name != "Custom")
         {
-            eventSystem.GetComponent<EventHandling>().updateCost(COST);
+            if (eventSystem.GetComponent<EventHandling>().currentCost >= COST)
+            {
+                eventSystem.GetComponent<EventHandling>().updateCost(COST);
+            }
         }
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .6f;
