@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public GameObject menu;
     public GameObject optionsMenu;
+    public GameObject helpMenu;
     public void playGame()
     {
         SceneManager.LoadScene("Game");
@@ -18,10 +19,17 @@ public class MenuController : MonoBehaviour
         optionsMenu.SetActive(true);
     }
 
+    public void help()
+    {
+        menu.SetActive(false);
+        helpMenu.SetActive(true);
+    }
+
     public void back()
     {
         menu.SetActive(true);
         optionsMenu.SetActive(false);
+        helpMenu.SetActive(false);
     }
 
     public void exitGame()

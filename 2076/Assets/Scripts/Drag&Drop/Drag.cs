@@ -17,7 +17,6 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
     private Vector3 startPos;
     private void Awake()
     {
-        startPos = myBox.GetComponent<ItemBox>().getPos();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
@@ -50,7 +49,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
         newPos.z = 0;
 
         Instantiate(fan, newPos, Quaternion.identity);
-        this.transform.position = new Vector3(startPos.x + 17.1f,startPos.y + 1.1f,0);
+        rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition;
 
     }
 
