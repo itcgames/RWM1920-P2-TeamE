@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 681, y: 348}
-  m_MaxSize: {x: 12006, y: 8048}
+  m_MinSize: {x: 683, y: 348}
+  m_MaxSize: {x: 12008, y: 8048}
   vertical: 0
-  controlID: 1330
+  controlID: 2020
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1371
     height: 948
-  m_MinSize: {x: 404, y: 348}
-  m_MaxSize: {x: 8004, y: 8048}
+  m_MinSize: {x: 406, y: 348}
+  m_MaxSize: {x: 8006, y: 8048}
   vertical: 1
-  controlID: 1331
+  controlID: 2021
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1371
     height: 670
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 1332
+  controlID: 2022
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 400
     height: 670
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -309,10 +309,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -241.75
-    m_HBaseRangeMax: 241.75
-    m_VBaseRangeMin: -158.25
-    m_VBaseRangeMax: 158.25
+    m_HBaseRangeMin: -483.5
+    m_HBaseRangeMax: 483.5
+    m_VBaseRangeMin: -316.5
+    m_VBaseRangeMax: 316.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
       y: 17
       width: 967
       height: 633
-    m_Scale: {x: 2, y: 2}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 483.5, y: 316.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -340,12 +340,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -241.75
-      y: -158.25
-      width: 483.5
-      height: 316.5
+      x: -483.5
+      y: -316.5
+      width: 967
+      height: 633
     m_MinimalGUI: 1
-  m_defaultScale: 2
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1934, y: 1300}
@@ -384,21 +384,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 16f4ffff32f5ffff74f5ffffbaf6ffffecf6ffff0cf7ffff36f7ffff56f7ffff80f7ffffa0f7ffff4cf8ffff30540000c8540000d6540000
+      m_ExpandedIDs: 6ee5fffffee5ffff1ce6fffff6e7fffffae7ffffbce9ffff4ceaffff6aeaffff88eaffff8ceaffff96ecffff26edffff44edffff62edffff66edffff24eeffffb4eeffffd2eeffffb2f0ffffbaf0ffffa0f7ffff1a4d0000824d0000f857000060580000be5d0000265e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cannon
-        m_OriginalName: Cannon
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -5142
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.5614033, y: -1.4975436, z: -0.44652477}
+    m_Target: {x: -0.8020164, y: -0.2944934, z: -0.60277474}
     speed: 2
-    m_Value: {x: -0.5614033, y: -1.4975436, z: -0.44652477}
+    m_Value: {x: -0.8020164, y: -0.2944934, z: -0.60277474}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 21704
+  m_LastSelectedObjectID: 24102
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,7 +594,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 240}
     m_SelectedIDs: 42440000
     m_LastClickedID: 17474
-    m_ExpandedIDs: 000000006a3c0000064000009a410000d4410000c6420000c843000000ca9a3b
+    m_ExpandedIDs: 00000000363c0000de3f000072410000ac410000a4420000bc430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -622,7 +622,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a3c0000064000009a410000d4410000c6420000c843000000ca9a3b
+    m_ExpandedIDs: 00000000363c0000de3f000072410000ac410000a4420000bc430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
