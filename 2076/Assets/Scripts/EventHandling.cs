@@ -31,11 +31,11 @@ public class EventHandling : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void timer()
     {
 
-        if (PlayandRestart.isPlay)
-        {
+        //if (PlayandRestart.isPlay)
+        //{
             if (m_endPoint.GetComponent<GameOver>().getGameOver() == true)
             {
                 if (gameOverTime == 5.0f)
@@ -57,7 +57,7 @@ public class EventHandling : MonoBehaviour
                 Debug.Log(m_timeText.text);
                 gameTimer += Time.deltaTime;
             }
-        }
+        // }
     }
 
     public void updateCost(float t_cost)

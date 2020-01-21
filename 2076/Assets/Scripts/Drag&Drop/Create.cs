@@ -18,14 +18,6 @@ public class Create : MonoBehaviour
     public GameObject bP;
     public GameObject sP;
 
-    public Button portalButton;
-    public Button fanButton;
-    public Button beltButton;
-    public Button bubbleButton;
-    public Button platButton;
-    public Button bigPlatButton;
-    public Button canonButton;
-
     public GameObject ball;
 
     GameObject objectSelected = null;
@@ -106,40 +98,40 @@ public class Create : MonoBehaviour
             }
         }
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 110)
-        {
-            portalButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 110)
+        //{
+        //    portalButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 30)
-        {
-            fanButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 30)
+        //{
+        //    fanButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
-        {
-            beltButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        //{
+        //    beltButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
-        {
-            bubbleButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        //{
+        //    bubbleButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
-        {
-            canonButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 20)
+        //{
+        //    canonButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
-        {
-            platButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
+        //{
+        //    platButton.interactable = false;
+        //}
 
-        if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
-        {
-            bigPlatButton.interactable = false;
-        }
+        //if (eventSystem.GetComponent<EventHandling>().currentCost < 10)
+        //{
+        //    bigPlatButton.interactable = false;
+        //}
     }
 
     public void RemoveAllFromList()

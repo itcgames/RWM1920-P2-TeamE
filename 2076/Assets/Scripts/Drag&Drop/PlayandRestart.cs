@@ -10,7 +10,6 @@ public class PlayandRestart : MonoBehaviour
     public GameObject belt;
     public GameObject bubble;
     public GameObject ball;
-    public static bool isPlay = false;
 
     Create createScript;
     public GameObject gameController;
@@ -33,9 +32,9 @@ public class PlayandRestart : MonoBehaviour
 
     public void Play()
     {
-        createScript.enableAll();
+        //createScript.enableAll();
         ball.GetComponent<Rigidbody2D>().isKinematic = false;
-        isPlay = true;
+        //isPlay = true;
     }
 
     public void Restart()
@@ -54,7 +53,7 @@ public class PlayandRestart : MonoBehaviour
         bigPlatButton.interactable = true;
         canonButton.interactable = true;
 
-        isPlay = false;
+        //isPlay = false;
 
 
     }

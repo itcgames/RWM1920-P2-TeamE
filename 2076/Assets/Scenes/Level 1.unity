@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -225,17 +225,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90586070}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7087093, w: 0.70550066}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1827308610}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.53817666, y: 0.6118657}
-  m_AnchorMax: {x: 0.7182745, y: 0.6626219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.26}
+  m_AnchorMin: {x: 0.58754903, y: 0.5828906}
+  m_AnchorMax: {x: 0.669, y: 0.6916219}
   m_AnchoredPosition: {x: -0.40014648, y: -1.5500488}
-  m_SizeDelta: {x: -214.59998, y: -88.400024}
+  m_SizeDelta: {x: -78.599976, y: -214.40002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &90586072
 CanvasGroup:
@@ -266,6 +266,7 @@ MonoBehaviour:
   myBox: {fileID: 325274711}
   eventSystem: {fileID: 2087772021}
   COST: 20
+  m_manager: {fileID: 707503304}
 --- !u!114 &90586074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,10 +336,10 @@ RectTransform:
   m_Father: {fileID: 1827308610}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.20911704, y: 0.4334063}
-  m_AnchorMax: {x: 0.29900002, y: 0.485}
-  m_AnchoredPosition: {x: 0.7996826, y: 2}
-  m_SizeDelta: {x: -90.599976, y: -90.400024}
+  m_AnchorMin: {x: 0.20911704, y: 0.4184594}
+  m_AnchorMax: {x: 0.29754895, y: 0.50545937}
+  m_AnchoredPosition: {x: 1.7996826, y: 0.7299957}
+  m_SizeDelta: {x: -88.6, y: -151.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &237028902
 CanvasGroup:
@@ -369,6 +370,7 @@ MonoBehaviour:
   myBox: {fileID: 60503542}
   eventSystem: {fileID: 2087772021}
   COST: 100
+  m_manager: {fileID: 707503304}
 --- !u!114 &237028904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,7 +389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 241c9358d02f5b4438d562d64e306278, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c42954c7305aed41b0e09152936ae2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -454,8 +456,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -485,10 +487,10 @@ RectTransform:
   m_Father: {fileID: 1827308610}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.604}
-  m_AnchorMin: {x: 0.5, y: 0.5828906}
-  m_AnchorMax: {x: 0.75454897, y: 0.6916219}
-  m_AnchoredPosition: {x: 0.5, y: 0.5}
-  m_SizeDelta: {x: -327.90002, y: -201.5}
+  m_AnchorMin: {x: 0.51000005, y: 0.56}
+  m_AnchorMax: {x: 0.73637235, y: 0.7154594}
+  m_AnchoredPosition: {x: -2.1699982, y: 0.020019531}
+  m_SizeDelta: {x: -294.09, y: -290.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &333887725
 GameObject:
@@ -558,6 +560,7 @@ MonoBehaviour:
   myBox: {fileID: 678065968}
   eventSystem: {fileID: 2087772021}
   COST: 10
+  m_manager: {fileID: 707503304}
 --- !u!114 &333887729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,30 +674,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087772025}
-        m_MethodName: resetG
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 707503307}
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2087772025}
-        m_MethodName: resetCost
+      - m_Target: {fileID: 707503308}
+        m_MethodName: ReturnToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1004,6 +985,7 @@ MonoBehaviour:
   myBox: {fileID: 784587343}
   eventSystem: {fileID: 2087772021}
   COST: 30
+  m_manager: {fileID: 707503304}
 --- !u!1 &508100354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,8 +1357,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 239, y: -811}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 219, y: -876}
+  m_SizeDelta: {x: 200, y: 52.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531483016
 MonoBehaviour:
@@ -2240,8 +2222,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2285,8 +2267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707503306}
-  - component: {fileID: 707503305}
-  - component: {fileID: 707503307}
+  - component: {fileID: 707503308}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2294,38 +2275,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &707503305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707503304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4073ebfd665136146b8fba5ea9031cce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fan: {fileID: 2201294319695625927, guid: f244f0434ef455f45a2d64427c214caa, type: 3}
-  belt: {fileID: 709184584300937211, guid: 9791718b874d4364ea1be0d1d2a8458f, type: 3}
-  bubble: {fileID: 9188224178520576048, guid: b75973adfd9b15148b49b7ca81c606e7, type: 3}
-  portalEntrance: {fileID: 7669968233637733616, guid: 7004e148ccf27ad4eaf3cfcd2675e263,
-    type: 3}
-  portalExit: {fileID: 1469246630994692538, guid: e7098b5ab7f25a344ac3042748d230a1,
-    type: 3}
-  cannon: {fileID: 7142631291170237328, guid: 74d14d65d5c2b12488dffcd1d5861003, type: 3}
-  bP: {fileID: 1980887786550452503, guid: 9f27f5d90bc2fbe4a84f7b041ca0921f, type: 3}
-  sP: {fileID: 1245565499219529718, guid: aa298cb037399934daab603cfb161968, type: 3}
-  portalButton: {fileID: 0}
-  fanButton: {fileID: 0}
-  beltButton: {fileID: 0}
-  bubbleButton: {fileID: 0}
-  platButton: {fileID: 0}
-  bigPlatButton: {fileID: 0}
-  canonButton: {fileID: 0}
-  ball: {fileID: 562884757}
-  eventSystem: {fileID: 2087772021}
-  createdObjs: []
 --- !u!4 &707503306
 Transform:
   m_ObjectHideFlags: 0
@@ -2340,7 +2289,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &707503307
+--- !u!114 &707503308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2349,21 +2298,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 707503304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43cba459c73660249a239e0609219bef, type: 3}
+  m_Script: {fileID: 11500000, guid: f9549f7f4666da845899af056c669db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fan: {fileID: 2201294319695625927, guid: f244f0434ef455f45a2d64427c214caa, type: 3}
-  belt: {fileID: 709184584300937211, guid: 9791718b874d4364ea1be0d1d2a8458f, type: 3}
-  bubble: {fileID: 9188224178520576048, guid: b75973adfd9b15148b49b7ca81c606e7, type: 3}
   ball: {fileID: 562884757}
-  gameController: {fileID: 707503304}
-  portalButton: {fileID: 0}
-  fanButton: {fileID: 0}
-  beltButton: {fileID: 0}
-  bubbleButton: {fileID: 0}
-  platButton: {fileID: 0}
-  bigPlatButton: {fileID: 0}
-  canonButton: {fileID: 0}
+  eventSystem: {fileID: 2087772021}
+  createdObjs: []
 --- !u!1 &717210261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,8 +2354,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2656,8 +2596,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2742,8 +2682,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2990,6 +2930,7 @@ MonoBehaviour:
   myBox: {fileID: 1617515262}
   eventSystem: {fileID: 2087772021}
   COST: 20
+  m_manager: {fileID: 707503304}
 --- !u!114 &841981647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,10 +3012,10 @@ RectTransform:
   m_Father: {fileID: 1827308610}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3653532, y: 0.4334063}
-  m_AnchorMax: {x: 0.45100003, y: 0.4896219}
-  m_AnchoredPosition: {x: -0.10043335, y: -1.0500488}
-  m_SizeDelta: {x: -84.599976, y: -98.400024}
+  m_AnchorMin: {x: 0.3653532, y: 0.4184594}
+  m_AnchorMax: {x: 0.45172557, y: 0.51100004}
+  m_AnchoredPosition: {x: -0.60043335, y: -0.41000366}
+  m_SizeDelta: {x: -85.6, y: -161.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &877580415
 CanvasGroup:
@@ -3105,6 +3046,7 @@ MonoBehaviour:
   myBox: {fileID: 812682017}
   eventSystem: {fileID: 2087772021}
   COST: 100
+  m_manager: {fileID: 707503304}
 --- !u!114 &877580417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3123,7 +3065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 241c9358d02f5b4438d562d64e306278, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d53727762b628c54ca5a9cd2dc43e376, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3374,7 +3316,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707503307}
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 707503308}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -3498,7 +3451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707503307}
+      - m_Target: {fileID: 707503308}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -3727,6 +3680,7 @@ MonoBehaviour:
   myBox: {fileID: 2087791872}
   eventSystem: {fileID: 2087772021}
   COST: 10
+  m_manager: {fileID: 707503304}
 --- !u!114 &1121537503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4831,8 +4785,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5007,6 +4961,7 @@ MonoBehaviour:
   myBox: {fileID: 717210261}
   eventSystem: {fileID: 2087772021}
   COST: 20
+  m_manager: {fileID: 707503304}
 --- !u!114 &1760889335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10315,8 +10270,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 719c9dc35ffddd84b8008f6210750db8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
