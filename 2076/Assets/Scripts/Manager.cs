@@ -10,12 +10,11 @@ public class Manager : MonoBehaviour
 
     public List<GameObject> createdObjs = new List<GameObject>();
     Vector3 ballPos;
-    bool isPlay = false;
+    public bool isPlay = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.find
 
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
 
