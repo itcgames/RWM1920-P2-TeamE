@@ -74,12 +74,12 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
 
             GameObject newGameObject = Instantiate(fan, newPos, rectTransform.rotation);
             m_manager.GetComponent<Manager>().createdObjs.Add(newGameObject);
-            rectTransform.rotation = fan.transform.rotation;
+            rectTransform.rotation = Quaternion.identity;
         }
         else
         {
             rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition;
-            rectTransform.rotation = fan.transform.rotation;
+            rectTransform.rotation = Quaternion.identity;
         }
     }
 
