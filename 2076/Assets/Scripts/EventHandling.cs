@@ -54,7 +54,7 @@ public class EventHandling : MonoBehaviour
             if (gameTimer >= 0)
             {
                 m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
-                Debug.Log(m_timeText.text);
+  //              Debug.Log(m_timeText.text);
                 gameTimer += Time.deltaTime;
             }
         // }

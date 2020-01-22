@@ -6,7 +6,7 @@ public class Acceleration : MonoBehaviour
 {
     private GameObject player;
 
-    float angle;
+    public float angle;
     float speed;
     float baseSpeed;
 
@@ -34,8 +34,10 @@ public class Acceleration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        angle = transform.rotation.eulerAngles.z - 90;
         if (accelerate == true)
         {
+            Debug.Log(Mathf.Deg2Rad * angle);
             Vector2 newSpeed = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle) * speed, Mathf.Sin(Mathf.Deg2Rad * angle) * speed);
 
             player.GetComponent<Rigidbody2D>().velocity += newSpeed;
