@@ -10,7 +10,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
     [SerializeField] private Canvas canv;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    public GameObject fan;
+    public GameObject current;
     public GameObject myBox;
 
     public GameObject eventSystem;
@@ -31,6 +31,15 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
         img = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void Start()
+    {
+        if (current.gameObject.tag == "PortalExit")
+        {
+            useable = false;
+            img.color = new Color(img.color.r, img.color.g, img.color.b, 0.5f);
+        }
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -56,7 +65,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
         {
             if (SceneManager.GetActiveScene().name != "Custom")
             {
-                if (fan.gameObject.tag != "PortalExit")
+                if (current.gameObject.tag != "PortalExit")
                 {
                     if (eventSystem.GetComponent<EventHandling>().currentCost >= COST)
                     {
@@ -72,7 +81,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
             newPos = Camera.main.ScreenToWorldPoint(eventData.position);
             newPos.z = 0;
 
-            GameObject newGameObject = Instantiate(fan, newPos, rectTransform.rotation);
+            GameObject newGameObject = Instantiate(current, newPos, rectTransform.rotation);
             m_manager.GetComponent<Manager>().createdObjs.Add(newGameObject);
             rectTransform.rotation = Quaternion.identity;
         }
@@ -89,6 +98,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
 
     private void Update()
     {
+        // Turns object off if you dont have enough
         if (eventSystem.GetComponent<EventHandling>().currentCost < COST)
         {
             useable = false;
@@ -101,16 +111,26 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
 
         }
 
-        if(fan.gameObject.tag == "Portal" && GameObject.FindGameObjectWithTag("Portal"))
+        // if the current object has a tag of portal && if there are any gameobjects of portal in the scene
+        // else if the current object is portal exit turn it off
+        if(current.gameObject.tag == "Portal" && GameObject.FindGameObjectWithTag("Portal"))
         {
             useable = false;
             img.color = new Color(img.color.r, img.color.g, img.color.b, 0.5f);
         }
 
-        if (fan.gameObject.tag == "PortalExit" && GameObject.FindGameObjectWithTag("PortalExit"))
+        if (current.gameObject.tag == "PortalExit")
         {
-            useable = false;
-            img.color = new Color(img.color.r, img.color.g, img.color.b, 0.5f);
+            if (GameObject.FindGameObjectWithTag("Portal"))
+            {
+                useable = true;
+                img.color = new Color(img.color.r, img.color.g, img.color.b, 1f);
+            }
+            else
+            {
+                useable = false;
+                img.color = new Color(img.color.r, img.color.g, img.color.b, 0.5f);
+            }
         }
     }
 

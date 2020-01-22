@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 7142631291170237328, guid: 74d14d65d5c2b12488dffcd1d5861003, type: 3}
+  current: {fileID: 7142631291170237328, guid: 74d14d65d5c2b12488dffcd1d5861003, type: 3}
   myBox: {fileID: 325274711}
   eventSystem: {fileID: 2087772021}
   COST: 20
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 7669968233637733616, guid: 7004e148ccf27ad4eaf3cfcd2675e263, type: 3}
+  current: {fileID: 7669968233637733616, guid: 7004e148ccf27ad4eaf3cfcd2675e263, type: 3}
   myBox: {fileID: 60503542}
   eventSystem: {fileID: 2087772021}
   COST: 110
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 1245565499219529718, guid: aa298cb037399934daab603cfb161968, type: 3}
+  current: {fileID: 1245565499219529718, guid: aa298cb037399934daab603cfb161968, type: 3}
   myBox: {fileID: 678065968}
   eventSystem: {fileID: 2087772021}
   COST: 10
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 2201294319695625927, guid: f244f0434ef455f45a2d64427c214caa, type: 3}
+  current: {fileID: 2201294319695625927, guid: f244f0434ef455f45a2d64427c214caa, type: 3}
   myBox: {fileID: 784587343}
   eventSystem: {fileID: 2087772021}
   COST: 20
@@ -1513,7 +1513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -225.5, y: 26.3}
+  m_AnchoredPosition: {x: -225.5, y: 26.300049}
   m_SizeDelta: {x: 4045.7, y: 1972.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532905885
@@ -2943,7 +2943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 709184584300937211, guid: 9791718b874d4364ea1be0d1d2a8458f, type: 3}
+  current: {fileID: 709184584300937211, guid: 9791718b874d4364ea1be0d1d2a8458f, type: 3}
   myBox: {fileID: 1617515262}
   eventSystem: {fileID: 2087772021}
   COST: 30
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 1469246630994692538, guid: e7098b5ab7f25a344ac3042748d230a1, type: 3}
+  current: {fileID: 1469246630994692538, guid: e7098b5ab7f25a344ac3042748d230a1, type: 3}
   myBox: {fileID: 812682017}
   eventSystem: {fileID: 2087772021}
   COST: 0
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 1980887786550452503, guid: 9f27f5d90bc2fbe4a84f7b041ca0921f, type: 3}
+  current: {fileID: 1980887786550452503, guid: 9f27f5d90bc2fbe4a84f7b041ca0921f, type: 3}
   myBox: {fileID: 2087791872}
   eventSystem: {fileID: 2087772021}
   COST: 10
@@ -4807,7 +4807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canv: {fileID: 1029688419}
-  fan: {fileID: 9188224178520576048, guid: b75973adfd9b15148b49b7ca81c606e7, type: 3}
+  current: {fileID: 9188224178520576048, guid: b75973adfd9b15148b49b7ca81c606e7, type: 3}
   myBox: {fileID: 717210261}
   eventSystem: {fileID: 2087772021}
   COST: 20
@@ -10064,7 +10064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_endPoint: {fileID: 598622822}
-  m_endPanel: {fileID: 532905883}
+  m_endPanel: {fileID: 598620726}
   m_timeText: {fileID: 462634271}
   m_costText: {fileID: 821793926}
   currentCost: 200
