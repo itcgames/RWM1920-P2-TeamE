@@ -61,35 +61,25 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (useable == true && m_manager.GetComponent<Manager>().isPlay == false && EventSystem.current.IsPointerOverGameObject() == false)
+        if (useable == true && m_manager.GetComponent<Manager>().isPlay == false)
         {
-            if (SceneManager.GetActiveScene().name != "Custom")
+            canvasGroup.blocksRaycasts = true; canvasGroup.alpha = 1.0f; rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition;
+            Vector3 newPos; newPos = Camera.main.ScreenToWorldPoint(eventData.position); newPos.z = 0;
+            if (EventSystem.current.IsPointerOverGameObject() == false)
             {
-                if (current.gameObject.tag != "PortalExit")
+                if (SceneManager.GetActiveScene().name != "Custom")
                 {
-                    if (eventSystem.GetComponent<EventHandling>().currentCost >= COST)
+                    if (current.gameObject.tag != "PortalExit")
                     {
-                        eventSystem.GetComponent<EventHandling>().updateCost(COST);
+                        if (eventSystem.GetComponent<EventHandling>().currentCost >= COST)
+                        { eventSystem.GetComponent<EventHandling>().updateCost(COST); }
                     }
                 }
+                GameObject newGameObject = Instantiate(current, newPos, rectTransform.rotation); m_manager.GetComponent<Manager>().createdObjs.Add(newGameObject);
             }
-            canvasGroup.blocksRaycasts = true;
-            canvasGroup.alpha = 1.0f;
-            rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition;
-
-            Vector3 newPos;
-            newPos = Camera.main.ScreenToWorldPoint(eventData.position);
-            newPos.z = 0;
-
-            GameObject newGameObject = Instantiate(current, newPos, rectTransform.rotation);
-            m_manager.GetComponent<Manager>().createdObjs.Add(newGameObject);
-            rectTransform.rotation = Quaternion.identity;
+            rectTransform.rotation = Quaternion.identity; selected = false;
         }
-        else
-        {
-            rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition;
-            rectTransform.rotation = Quaternion.identity;
-        }
+        else { selected = false; rectTransform.anchoredPosition = myBox.GetComponent<RectTransform>().anchoredPosition; rectTransform.rotation = Quaternion.identity; }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -132,6 +122,11 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
                 img.color = new Color(img.color.r, img.color.g, img.color.b, 0.5f);
             }
         }
+
+        if(m_manager.GetComponent<Manager>().isPlay == false)
+        {
+            DragGameObject();
+        }
     }
 
     void LateUpdate()
@@ -160,5 +155,27 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
             rectTransform.rotation = desiredRotation;
             //transform.position += Vector3.forward * pinchAmount;
         }
+    }
+
+    private void DragGameObject()
+    {
+        //if (!EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        Vector2 touchpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0/*Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 0*/));
+        //        Collider[] hit = Physics.OverlapSphere(touchpos, 0);
+
+        //        for (int i = 0; i < hit.Length; i++)
+        //        {
+
+        //            if (hit[i] != null)
+        //            {
+        //                Debug.Log(hit[i].gameObject.name);
+        //                //hit.gameObject.transform.position = touchpos;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }
