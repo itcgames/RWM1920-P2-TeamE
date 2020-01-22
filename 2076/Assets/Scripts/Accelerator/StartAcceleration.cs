@@ -19,8 +19,22 @@ public class StartAcceleration : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Wall") == false)
+        if (collider.CompareTag("Wall") == false && controller.GetComponent<Acceleration>().accelerate == false)
         {
+            controller.GetComponent<Acceleration>().setObject(collider.gameObject);
+            controller.GetComponent<Acceleration>().accelerate = true;
+            controller.GetComponent<Acceleration>().correctVelocity();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GetComponent<BoxCollider2D>().isTrigger = false;
+    }
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Wall") == false && controller.GetComponent<Acceleration>().accelerate == false)
+        {
+            controller.GetComponent<Acceleration>().setObject(collider.gameObject);
             controller.GetComponent<Acceleration>().accelerate = true;
             controller.GetComponent<Acceleration>().correctVelocity();
         }
