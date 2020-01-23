@@ -51,7 +51,7 @@ public class Manager : MonoBehaviour
                 if (createdObjs[i].gameObject.tag == "Fan")
                 {
                     createdObjs[i].gameObject.GetComponentInChildren<AreaEffector2D>().enabled = true;
-                    createdObjs[i].gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                    createdObjs[i].gameObject.GetComponent<CapsuleCollider2D>().isTrigger = false;
                 }
 
                 if (createdObjs[i].gameObject.tag == "Bubble")
@@ -68,6 +68,7 @@ public class Manager : MonoBehaviour
                 if (createdObjs[i].gameObject.tag == "Cannon")
                 {
                     createdObjs[i].GetComponentInChildren<BoxCollider2D>().enabled = true;
+                    createdObjs[i].GetComponentInChildren<BoxCollider2D>().isTrigger = false;
                 }
             }
         }

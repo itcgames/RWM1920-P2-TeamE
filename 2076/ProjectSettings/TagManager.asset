@@ -12,6 +12,8 @@ TagManager:
   - Fan
   - Belt
   - Cannon
+  - Rotator
+  - Manager
   layers:
   - Default
   - TransparentFX
