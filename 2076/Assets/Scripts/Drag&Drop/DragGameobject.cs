@@ -11,11 +11,13 @@ public class DragGameobject : MonoBehaviour
     GameObject manager;
     GameObject eventHandler;
     private string sort;
+    GameObject portalEntrance;
 
     private void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         eventHandler = GameObject.Find("EventSystem");
+        portalEntrance = GameObject.FindGameObjectWithTag("Portal");
     }
 
     private void OnMouseDrag()
@@ -29,7 +31,24 @@ public class DragGameobject : MonoBehaviour
             }
             sort = gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-            transform.position = touchpos;
+
+            if(tag == "PortalExit")
+            {
+                Debug.Log(Vector2.Distance(transform.position, portalEntrance.transform.position));
+                if(Vector2.Distance(transform.position, portalEntrance.transform.position) >= 10.0f )
+                {
+                    transform.position = transform.position;
+                }
+                else
+                {
+                    transform.position = touchpos;
+                }
+            }
+            else
+            {
+                transform.position = touchpos;
+            }
+
         }
     }
 

@@ -69,7 +69,7 @@ public class Manager : MonoBehaviour
                 if (createdObjs[i].gameObject.tag == "Cannon")
                 {
                     createdObjs[i].GetComponentInChildren<BoxCollider2D>().enabled = true;
-                    createdObjs[i].GetComponentInChildren<BoxCollider2D>().isTrigger = false;
+                    //createdObjs[i].GetComponentInChildren<BoxCollider2D>().isTrigger = false;
                 }
             }
         }
