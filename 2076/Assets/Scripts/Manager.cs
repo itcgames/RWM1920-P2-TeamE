@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     public List<GameObject> createdObjs = new List<GameObject>();
     Vector3 ballPos;
     public bool isPlay = false;
+    public GameObject Bin;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +90,35 @@ public class Manager : MonoBehaviour
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
         eventSystem.GetComponent<EventHandling>().resetCost();
         RemoveAllFromList();
+    }
+
+    public void GarbageCleanUp()
+    {
+        if (createdObjs.Count != 0)
+        {
+            for (int i = createdObjs.Count - 1; i > -1; i--)
+            {
+                if (createdObjs[i].gameObject.transform.position == Bin.gameObject.transform.position)
+                {
+                    Destroy(createdObjs[i].gameObject);
+                    GetComponent<Manager>().createdObjs.RemoveAt(i);
+                }
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (createdObjs.Count != 0)
+        {
+            for (int i = createdObjs.Count - 1; i > -1; i--)
+            {
+                if (createdObjs[i].gameObject == null)
+                {
+                    GetComponent<Manager>().createdObjs.RemoveAt(i);
+                }
+            }
+        }
     }
 
     public void ReturnToMain()

@@ -66,6 +66,11 @@ public class EventHandling : MonoBehaviour
         m_costText.text = currentCost.ToString();
     }
 
+    public void refund(float t_cost)
+    {
+        currentCost += t_cost;
+        m_costText.text = currentCost.ToString();
+    }
     public void resetCost()
     {
         currentCost = 200;
