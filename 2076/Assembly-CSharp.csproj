@@ -60,31 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fan\Scripts\FanScript.cs" />
     <Compile Include="Assets\Portals\Scripts\Distance.cs" />
     <Compile Include="Assets\Portals\Scripts\PortalExit.cs" />
-    <Compile Include="Assets\Scripts\accelerate.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\Acceleration.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\CheckForClickAccel.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\CheckForClickAngle.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\EndAcceleration.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\Rotation.cs" />
-    <Compile Include="Assets\Scripts\Accelerator\StartAcceleration.cs" />
-    <Compile Include="Assets\Scripts\AudioControl.cs" />
-    <Compile Include="Assets\Scripts\Bubble\BubbleBlow.cs" />
-    <Compile Include="Assets\Scripts\Bubble\BubbleMovement.cs" />
-    <Compile Include="Assets\Scripts\Bubble\CreateBubble.cs" />
-    <Compile Include="Assets\Scripts\Drag&amp;Drop\Drag.cs" />
-    <Compile Include="Assets\Scripts\Drag&amp;Drop\DragGameobject.cs" />
-    <Compile Include="Assets\Scripts\Drag&amp;Drop\ItemBox.cs" />
-    <Compile Include="Assets\Scripts\Drag&amp;Drop\RotateTouch.cs" />
-    <Compile Include="Assets\Scripts\EventHandling.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\Manager.cs" />
-    <Compile Include="Assets\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Scripts\Particles.cs" />
-    <Compile Include="Assets\Scripts\Portals\PortalEntrance.cs" />
-    <Compile Include="Assets\Scripts\Tutorial\ClickTutorialText.cs" />
-    <Compile Include="Assets\Scripts\Tutorial\ManageTutorialText.cs" />
+    <Compile Include="Assets\Prefabs\Conveyor Belt\Scripts\ConveyorBelt.cs" />
+    <Compile Include="Assets\Prefabs\Conveyor Belt\Scripts\Rotate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -733,9 +713,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="JackScripts.csproj">
-      <Project>{EBD0F96F-BB2B-CB12-58FC-92C1C0635438}</Project>
-      <Name>JackScripts</Name>
+    <ProjectReference Include="GameAssembly.csproj">
+      <Project>{9204C6A0-279D-E9A8-E950-258DBC4857F1}</Project>
+      <Name>GameAssembly</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

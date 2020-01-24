@@ -12,6 +12,8 @@ public class DragGameobject : MonoBehaviour
     GameObject eventHandler;
     private string sort;
     GameObject portalEntrance;
+    bool selected = false;
+
 
     private void Start()
     {
@@ -22,6 +24,7 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        selected = true;
         if (!manager.GetComponent<Manager>().isPlay)
         {
             if (count == 0)
@@ -94,5 +97,33 @@ public class DragGameobject : MonoBehaviour
     private void Update()
     {
         touchpos = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+    }
+
+    void LateUpdate()
+    {
+        if (selected == true)
+        {
+            float pinchAmount = 0;
+            Quaternion desiredRotation = gameObject.transform.rotation;
+
+            manager.GetComponent<RotateTouch>().Calculate();
+
+            if (Mathf.Abs(manager.GetComponent<RotateTouch>().pinchDistanceDelta) > 0)
+            { // zoom
+                pinchAmount = manager.GetComponent<RotateTouch>().pinchDistanceDelta;
+            }
+
+            if (Mathf.Abs(manager.GetComponent<RotateTouch>().turnAngleDelta) > 0)
+            { // rotate
+                Vector3 rotationDeg = Vector3.zero;
+                rotationDeg.z = manager.GetComponent<RotateTouch>().turnAngleDelta;
+                desiredRotation *= Quaternion.Euler(rotationDeg);
+            }
+
+
+            // not so sure those will work:
+            gameObject.transform.rotation = desiredRotation;
+            //transform.position += Vector3.forward * pinchAmount;
+        }
     }
 }
