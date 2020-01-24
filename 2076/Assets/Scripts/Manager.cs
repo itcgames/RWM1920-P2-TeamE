@@ -63,7 +63,7 @@ public class Manager : MonoBehaviour
 
                 if (createdObjs[i].gameObject.tag == "Belt")
                 {
-                    createdObjs[i].gameObject.GetComponentInChildren<ConveyorBelt>().enabled = true;
+                    //createdObjs[i].gameObject.GetComponentInChildren<ConveyorBelt>().enabled = true;
                     createdObjs[i].gameObject.GetComponentInChildren<CapsuleCollider2D>().enabled = true;
                 }
                 if (createdObjs[i].gameObject.tag == "Cannon")

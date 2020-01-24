@@ -732,7 +732,6 @@ C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.IvyParser.dll
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.CecilTools.dll
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.Cecil.Pdb.dll
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.Cecil.Mdb.dll
-C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\JackScripts.pdb
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\UnityEditor.xml
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.RenderPipelines.Core.Editor.pdb
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\Unity.RenderPipelines.Core.Runtime.pdb
@@ -777,3 +776,4 @@ C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\obj\Debug\Assembly-CSharp.csproj.Cor
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\obj\Debug\Assembly-CSharp.dll
 C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Alex\Desktop\RWM1920-P2-TeamE\2076\Temp\bin\Debug\GameAssembly.pdb

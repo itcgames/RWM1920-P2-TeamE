@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
+
 
 public class EventHandling : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject m_endPoint;
     public GameObject m_endPanel;
-    public TextMeshProUGUI m_timeText;
-    public TextMeshProUGUI m_costText;
+    public Text m_timeText;
+    public Text m_costText;
 
     float gameOverTime;
     float gameTimer;
