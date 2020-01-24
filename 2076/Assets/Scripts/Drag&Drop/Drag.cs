@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] private Canvas canv;
+    [SerializeField] public Canvas canv;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public GameObject current;
@@ -15,7 +15,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
 
     public GameObject eventSystem;
     public int COST = 0;
-    private bool useable = true;
+    public bool useable = true;
 
     private Vector3 startPos;
     private Image img;
@@ -177,5 +177,14 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
         //        }
         //    }
         //}
+    }
+
+    public void OnEndDrags()
+    {
+            canvasGroup.blocksRaycasts = true; canvasGroup.alpha = 1.0f;
+            if (EventSystem.current.IsPointerOverGameObject() == false)
+            {
+                GameObject newGameObject = Instantiate(current, newPos, rectTransform.rotation); m_manager.GetComponent<Manager>().createdObjs.Add(newGameObject);
+            }
     }
 }

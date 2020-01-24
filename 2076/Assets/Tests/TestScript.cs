@@ -14,13 +14,17 @@ namespace Tests
         GameObject manager = Resources.Load("GameController") as GameObject;
         GameObject eventHandle = Resources.Load("EventSystem") as GameObject;
         float time;
+        float cost;
 
         GameObject player;
+        GameObject goal;
+
 
         [SetUp]
         public void Setup()
         {
             player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Player"));
+            goal = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Goal"));
         }
 
         // A Test behaves as an ordinary method
@@ -46,8 +50,6 @@ namespace Tests
             Assert.AreNotEqual(time, eventHandle.GetComponent<EventHandling>().gameTimer);
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator TestScriptWithEnumeratorPasses()
         {
@@ -59,19 +61,28 @@ namespace Tests
             Assert.AreNotEqual(output, player.transform.position.y);
         }
 
-        //Test to see if the bin button destroys the components // Alex
+        //brian test if the base game cost is 200
         [UnityTest]
-        public IEnumerator BinTest()
+        public IEnumerator TestCostWithEnumeratorPasses()
         {
-            Fan.gameObject.GetComponent<Transform>().position = new Vector3(0, 0, 0);
-            Bin.gameObject.GetComponent<Transform>().position = new Vector3(0, 0, 0);
-            if (Fan.gameObject.transform.position == Bin.gameObject.transform.position)
-            {
-                Fan = null;
-            }
+            manager.GetComponent<Manager>().eventSystem = eventHandle;
 
-            Assert.IsNull(Fan);
-            yield return null;
+            cost = eventHandle.GetComponent<EventHandling>().currentCost;
+
+            yield return new WaitForSeconds(3.0f);
+
+            Assert.AreNotEqual(200, eventHandle.GetComponent<EventHandling>().currentCost);
+        }
+
+        //Brian, Test is the game is over once the ball hits the goal
+        [UnityTest]
+        public IEnumerator TestGoalWithEnumeratorPasses()
+        {
+            goal.transform.position = new Vector2(10, 30);
+
+            yield return new WaitForSeconds(5.0f);
+
+            Assert.AreEqual(false, manager.GetComponent<Manager>().isPlay);
         }
     }
 }
