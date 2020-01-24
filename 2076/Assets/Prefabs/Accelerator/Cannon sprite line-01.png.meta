@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: c94f0273cab54294fb3eda5122e4b476
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cannon sprite line-01_0
+    21300002: Cannon sprite line-01_1
+    21300004: Cannon sprite line-01_2
+    21300006: Cannon sprite line-01_3
+    21300008: Cannon sprite line-01_4
+    21300010: Cannon sprite line-01_5
+    21300012: Cannon sprite line-01_6
+    21300014: Cannon sprite line-01_7
+    21300016: Cannon sprite line-01_8
+    21300018: Cannon sprite line-01_9
+    21300020: Cannon sprite line-01_10
+    21300022: Cannon sprite line-01_11
+    21300024: Cannon sprite line-01_12
+    21300026: Cannon sprite line-01_13
+    21300028: Cannon sprite line-01_14
+    21300030: Cannon sprite line-01_15
+    21300032: Cannon sprite line-01_16
+    21300034: Cannon sprite line-01_17
+    21300036: Cannon sprite line-01_18
+    21300038: Cannon sprite line-01_19
+    21300040: Cannon sprite line-01_20
+    21300042: Cannon sprite line-01_21
+    21300044: Cannon sprite line-01_22
+    21300046: Cannon sprite line-01_23
+    21300048: Cannon sprite line-01_24
+    21300050: Cannon sprite line-01_25
+    21300052: Cannon sprite line-01_26
+    21300054: Cannon sprite line-01_27
+    21300056: Cannon sprite line-01_28
+    21300058: Cannon sprite line-01_29
+    21300060: Cannon sprite line-01_30
+    21300062: Cannon sprite line-01_31
+    21300064: Cannon sprite line-01_32
+    21300066: Cannon sprite line-01_33
+    21300068: Cannon sprite line-01_34
+    21300070: Cannon sprite line-01_35
+    21300072: Cannon sprite line-01_36
+    21300074: Cannon sprite line-01_37
+    21300076: Cannon sprite line-01_38
+    21300078: Cannon sprite line-01_39
+    21300080: Cannon sprite line-01_40
+    21300082: Cannon sprite line-01_41
+    21300084: Cannon sprite line-01_42
+    21300086: Cannon sprite line-01_43
+    21300088: Cannon sprite line-01_44
+    21300090: Cannon sprite line-01_45
+    21300092: Cannon sprite line-01_46
+    21300094: Cannon sprite line-01_47
+    21300096: Cannon sprite line-01_48
+    21300098: Cannon sprite line-01_49
+    21300100: Cannon sprite line-01_50
+    21300102: Cannon sprite line-01_51
+    21300104: Cannon sprite line-01_52
+    21300106: Cannon sprite line-01_53
+    21300108: Cannon sprite line-01_54
+    21300110: Cannon sprite line-01_55
+    21300112: Cannon sprite line-01_56
+    21300114: Cannon sprite line-01_57
+    21300116: Cannon sprite line-01_58
+    21300118: Cannon sprite line-01_59
+    21300120: Cannon sprite line-01_60
+    21300122: Cannon sprite line-01_61
+    21300124: Cannon sprite line-01_62
+    21300126: Cannon sprite line-01_63
+    21300128: Cannon sprite line-01_64
+    21300130: Cannon sprite line-01_65
+    21300132: Cannon sprite line-01_66
+    21300134: Cannon sprite line-01_67
+    21300136: Cannon sprite line-01_68
+    21300138: Cannon sprite line-01_69
+    21300140: Cannon sprite line-01_70
+    21300142: Cannon sprite line-01_71
+    21300144: Cannon sprite line-01_72
+    21300146: Cannon sprite line-01_73
+    21300148: Cannon sprite line-01_74
+    21300150: Cannon sprite line-01_75
+    21300152: Cannon sprite line-01_76
+    21300154: Cannon sprite line-01_77
+    21300156: Cannon sprite line-01_78
+    21300158: Cannon sprite line-01_79
+    21300160: Cannon sprite line-01_80
+    21300162: Cannon sprite line-01_81
+    21300164: Cannon sprite line-01_82
+    21300166: Cannon sprite line-01_83
+    21300168: Cannon sprite line-01_84
+    21300170: Cannon sprite line-01_85
+    21300172: Cannon sprite line-01_86
+    21300174: Cannon sprite line-01_87
+    21300176: Cannon sprite line-01_88
+    21300178: Cannon sprite line-01_89
+    21300180: Cannon sprite line-01_90
+    21300182: Cannon sprite line-01_91
+    21300184: Cannon sprite line-01_92
+    21300186: Cannon sprite line-01_93
+    21300188: Cannon sprite line-01_94
+    21300190: Cannon sprite line-01_95
+    21300192: Cannon sprite line-01_96
+    21300194: Cannon sprite line-01_97
+    21300196: Cannon sprite line-01_98
+    21300198: Cannon sprite line-01_99
+    21300200: Cannon sprite line-01_100
+    21300202: Cannon sprite line-01_101
+    21300204: Cannon sprite line-01_102
+    21300206: Cannon sprite line-01_103
+    21300208: Cannon sprite line-01_104
+    21300210: Cannon sprite line-01_105
+    21300212: Cannon sprite line-01_106
+    21300214: Cannon sprite line-01_107
+    21300216: Cannon sprite line-01_108
+    21300218: Cannon sprite line-01_109
+    21300220: Cannon sprite line-01_110
+    21300222: Cannon sprite line-01_111
+    21300224: Cannon sprite line-01_112
+    21300226: Cannon sprite line-01_113
+    21300228: Cannon sprite line-01_114
+    21300230: Cannon sprite line-01_115
+    21300232: Cannon sprite line-01_116
+    21300234: Cannon sprite line-01_117
+    21300236: Cannon sprite line-01_118
+    21300238: Cannon sprite line-01_119
+    21300240: Cannon sprite line-01_120
+    21300242: Cannon sprite line-01_121
+    21300244: Cannon sprite line-01_122
+    21300246: Cannon sprite line-01_123
+    21300248: Cannon sprite line-01_124
+    21300250: Cannon sprite line-01_125
+    21300252: Cannon sprite line-01_126
+    21300254: Cannon sprite line-01_127
+    21300256: Cannon sprite line-01_128
+    21300258: Cannon sprite line-01_129
+    21300260: Cannon sprite line-01_130
+    21300262: Cannon sprite line-01_131
+    21300264: Cannon sprite line-01_132
+    21300266: Cannon sprite line-01_133
+    21300268: Cannon sprite line-01_134
+    21300270: Cannon sprite line-01_135
+    21300272: Cannon sprite line-01_136
+    21300274: Cannon sprite line-01_137
+    21300276: Cannon sprite line-01_138
+    21300278: Cannon sprite line-01_139
+    21300280: Cannon sprite line-01_140
+    21300282: Cannon sprite line-01_141
+    21300284: Cannon sprite line-01_142
+    21300286: Cannon sprite line-01_143
+    21300288: Cannon sprite line-01_144
+    21300290: Cannon sprite line-01_145
+    21300292: Cannon sprite line-01_146
+    21300294: Cannon sprite line-01_147
+    21300296: Cannon sprite line-01_148
+    21300298: Cannon sprite line-01_149
+    21300300: Cannon sprite line-01_150
+    21300302: Cannon sprite line-01_151
+    21300304: Cannon sprite line-01_152
+    21300306: Cannon sprite line-01_153
+    21300308: Cannon sprite line-01_154
+    21300310: Cannon sprite line-01_155
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cannon sprite line-01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b7bbd1ca9e4b04898dcaa049de9819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca2396f8d991ee4883c8af8cb980824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5631500eb02eaa24fa24b89bb8ada95b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 666
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbae74e52f3c424bb96338b03f0cadf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c543f213751b248b34e7afb771571a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1110
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296e7e16febd50f4f81a21d62a113649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon sprite line-01_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1332
+        width: 140
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19556b7b92c960c439a7db14f1f71e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3816ef46f143d5345bcbdf42aabb9aa5
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

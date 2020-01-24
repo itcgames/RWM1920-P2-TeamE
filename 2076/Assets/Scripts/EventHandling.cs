@@ -14,7 +14,7 @@ public class EventHandling : MonoBehaviour
     public Text m_costText;
 
     float gameOverTime;
-    float gameTimer;
+    public float gameTimer;
 
     public float currentCost = 200;
 
@@ -33,31 +33,26 @@ public class EventHandling : MonoBehaviour
     // Update is called once per frame
     public void timer()
     {
-
-        //if (PlayandRestart.isPlay)
-        //{
-            if (m_endPoint.GetComponent<GameOver>().getGameOver() == true)
+        if (m_endPoint.GetComponent<GameOver>().getGameOver() == true)
+        {
+            if (gameOverTime == 5.0f)
             {
-                if (gameOverTime == 5.0f)
-                {
-                    m_endPanel.SetActive(true);
-                    Instantiate(particles);
-                }
-                if (gameOverTime <= 0)
-                {
-                    SceneManager.LoadScene("MainMenu");
-                }
-                gameOverTime -= Time.deltaTime;
+                m_endPanel.SetActive(true);
+                Instantiate(particles);
             }
-
-
-            if (gameTimer >= 0)
+            if (gameOverTime <= 0)
             {
-                m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
-  //              Debug.Log(m_timeText.text);
-                gameTimer += Time.deltaTime;
+                SceneManager.LoadScene("MainMenu");
             }
-        // }
+            gameOverTime -= Time.deltaTime;
+        }
+
+
+        if (gameTimer >= 0)
+        {
+            m_timeText.text = (Mathf.Ceil(gameTimer)).ToString();
+            gameTimer += Time.deltaTime;
+        }
     }
 
     public void updateCost(float t_cost)
@@ -82,6 +77,5 @@ public class EventHandling : MonoBehaviour
     public void resetG()
     {
         SceneManager.LoadScene("MainMenu");
-
     }
 }

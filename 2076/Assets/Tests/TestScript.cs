@@ -10,6 +10,19 @@ namespace Tests
     {
         GameObject Fan = Resources.Load("Fan") as GameObject;
         GameObject Bin = Resources.Load("Bin") as GameObject;
+
+        GameObject manager = Resources.Load("GameController") as GameObject;
+        GameObject eventHandle = Resources.Load("EventSystem") as GameObject;
+        float time;
+
+        GameObject player;
+
+        [SetUp]
+        public void Setup()
+        {
+            player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Player"));
+        }
+
         // A Test behaves as an ordinary method
         [Test]
         public void TestScriptSimplePasses()
@@ -20,11 +33,30 @@ namespace Tests
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
+        public IEnumerator TestTimerWithEnumeratorPasses()
+        {
+            manager.GetComponent<Manager>().eventSystem = eventHandle;
+
+            time = eventHandle.GetComponent<EventHandling>().gameTimer;
+            manager.GetComponent<Manager>().isPlay = true;
+            eventHandle.GetComponent<EventHandling>().gameTimer++;
+
+            yield return new WaitForSeconds(3.0f);
+
+            Assert.AreNotEqual(time, eventHandle.GetComponent<EventHandling>().gameTimer);
+        }
+
+        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+        // `yield return null;` to skip a frame.
+        [UnityTest]
         public IEnumerator TestScriptWithEnumeratorPasses()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            player.transform.position = new Vector2(10, 10);
+            float output = player.transform.position.y;
+
+            yield return new WaitForSeconds(2.0f);
+
+            Assert.AreNotEqual(output, player.transform.position.y);
         }
 
         //Test to see if the bin button destroys the components // Alex
