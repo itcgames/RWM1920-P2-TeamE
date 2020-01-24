@@ -19,7 +19,7 @@ public class ManageTutorialText : MonoBehaviour
     int counter;
 
     GameObject m_currentText;
-    void Start()
+    public void Start()
     {
         counter = 0;
 
@@ -38,7 +38,6 @@ public class ManageTutorialText : MonoBehaviour
     {
         m_currentText.SetActive(false);
         counter++;
-        Debug.Log(counter);
         if (counter < 9)
         {
             m_currentText = gameObject.transform.Find(m_nameList[counter]).gameObject;
@@ -48,5 +47,10 @@ public class ManageTutorialText : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public string getText()
+    {
+        return m_nameList[counter];
     }
 }
