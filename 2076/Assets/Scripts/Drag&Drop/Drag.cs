@@ -127,6 +127,19 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDrag
         {
             DragGameObject();
         }
+
+        if (selected == true)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                transform.Rotate(Vector3.forward, -50 * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                transform.Rotate(Vector3.forward, 50 * Time.deltaTime);
+            }
+        }
     }
 
     void LateUpdate()

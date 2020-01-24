@@ -92,11 +92,25 @@ public class DragGameobject : MonoBehaviour
         }
         gameObject.GetComponent<SpriteRenderer>().sortingLayerName = sort;
         count = 0;
+        selected = false;
     }
 
     private void Update()
     {
         touchpos = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+
+        if (selected == true)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                transform.Rotate(Vector3.forward, -50 * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                transform.Rotate(Vector3.forward, 50 * Time.deltaTime);
+            }
+        }
     }
 
     void LateUpdate()
